@@ -1,0 +1,47 @@
+scoring_weights:
+  momentum: 0.35
+  risk: 0.25
+  valuation: 0.20
+  stability: 0.20
+
+portfolio:
+  max_defense_holdings: 5
+  defense_allocation: 0.70
+  initial_investment: 10000000.00
+  # Fixed inception date set on 2026-05-10 as three months before setup.
+  fund_start_date: 2026-02-10
+
+anchor_assets:
+  - ticker: GLD
+    company_name: SPDR Gold Shares
+    category: Gold anchor
+    allocation: 0.15
+    reason_selected: Gold anchor for geopolitical-risk and real-asset exposure
+  - ticker: XLE
+    company_name: Energy Select Sector SPDR Fund
+    category: Oil and energy anchor
+    allocation: 0.15
+    reason_selected: Oil and energy anchor for geopolitical supply-risk exposure
+
+benchmark:
+  ticker: SPY
+  name: SPDR S&P 500 ETF Trust
+
+price_history:
+  period: 1y
+  interval: 1d
+  min_price_points: 126
+  annualization_days: 252
+  momentum_windows:
+    three_month: 63
+    six_month: 126
+  volatility_window: 90
+
+valuation:
+  max_usable_pe: 300
+
+news:
+  max_headlines_per_ticker: 5
+  request_timeout_seconds: 8
+  rss_feeds:
+    - "https://feeds.finance.yahoo.com/rss/2.0/headline?s={ticker}&region=US&lang=en-US"
