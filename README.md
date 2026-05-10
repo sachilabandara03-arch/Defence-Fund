@@ -1,4 +1,4 @@
-# Geopolitical Defense Fund Dashboard
+# Defence-Fund
 
 Streamlit dashboard for a simulated Canadian/TSX-focused defense, aerospace, and geopolitical-risk portfolio.
 
